@@ -183,6 +183,42 @@ INCOME_OPTS = {
 }
 INTEREST_OPTS = ["주거·독립", "취업·이직", "창업", "학비·장학금",
                  "자기계발·교육", "생활비·교통", "문화·여가", "자산형성"]
+# 관심분야 태그 → 정책 분야(카테고리) — 결과 화면 '관심 분야' 필터 옵션 구성용
+INTEREST_TO_CATEGORY = {
+    "주거·독립": "주거", "취업·이직": "취업·창업", "창업": "취업·창업",
+    "학비·장학금": "교육·장학", "자기계발·교육": "교육·역량",
+    "생활비·교통": "생활·교통", "문화·여가": "생활·교통", "자산형성": "생활·교통",
+}
+
+_STARTUP_KW = ("창업", "스타트업", "사업화")
+_ASSET_KW = ("자산형성", "저축", "통장", "적금")
+_CULTURE_KW = ("문화", "공연", "전시", "예술")
+
+
+def matches_interest_tag(r, tag):
+    """정책이 관심분야 태그에 해당하는지 — 입력창 태그와 같은 단어·같은 의미로 필터링.
+    같은 분야를 공유하는 태그(창업/취업·이직, 자산형성/문화·여가/생활비·교통)는
+    키워드로 세분해 구분한다."""
+    cat = r.get("category", "")
+    kw = " ".join(r.get("keywords", [])) + " " + r.get("name", "")
+    if tag == "주거·독립":
+        return cat == "주거"
+    if tag == "학비·장학금":
+        return cat == "교육·장학"
+    if tag == "자기계발·교육":
+        return cat == "교육·역량"
+    if tag == "창업":
+        return cat == "취업·창업" and any(k in kw for k in _STARTUP_KW)
+    if tag == "취업·이직":
+        return cat == "취업·창업" and not any(k in kw for k in _STARTUP_KW)
+    if tag == "자산형성":
+        return cat == "생활·교통" and any(k in kw for k in _ASSET_KW)
+    if tag == "문화·여가":
+        return cat == "생활·교통" and any(k in kw for k in _CULTURE_KW)
+    if tag == "생활비·교통":
+        return (cat == "생활·교통"
+                and not any(k in kw for k in _ASSET_KW + _CULTURE_KW))
+    return True
 
 st.session_state.setdefault("submitted", False)
 st.session_state.setdefault("profile", {})
@@ -608,8 +644,16 @@ def center_panel(user, results):
                            selection_mode="single", label_visibility="collapsed",
                            format_func=lambda o: f"{o} ({counts[o]})", key="flt")
         with f2:
-            cats = sorted({r.get("category", "") for r in results if r.get("category")})
-            cat = st.selectbox("분야", ["관심 분야 (전체)"] + cats,
+            # 입력창에서 고른 관심분야 태그를 같은 단어 그대로 필터 옵션으로 노출
+            my_tags = [t for t in user.interests
+                       if any(matches_interest_tag(r, t) for r in results)]
+            if not my_tags:                      # 관심분야 미선택 시 전체 태그 폴백
+                my_tags = [t for t in INTEREST_OPTS
+                           if any(matches_interest_tag(r, t) for r in results)]
+            cat_opts = ["관심 분야 (전체)"] + my_tags
+            if st.session_state.get("cat_flt") not in cat_opts:
+                st.session_state.cat_flt = "관심 분야 (전체)"
+            cat = st.selectbox("분야", cat_opts,
                                label_visibility="collapsed", key="cat_flt")
         with f3:
             sort_by = st.selectbox("정렬", ["적합도순", "마감 임박순", "금액순"],
@@ -626,7 +670,7 @@ def center_panel(user, results):
         else:
             shown = list(results)
         if cat != "관심 분야 (전체)":
-            shown = [r for r in shown if r.get("category") == cat]
+            shown = [r for r in shown if matches_interest_tag(r, cat)]
         if sort_by == "마감 임박순":
             shown.sort(key=lambda r: r["days_left"] if r["days_left"] is not None else 99999)
         elif sort_by == "금액순":
