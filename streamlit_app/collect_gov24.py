@@ -156,6 +156,12 @@ def to_schema(svc, cond=None):
     if len(summary) > 120:
         summary = summary[:117] + "..."
     target = svc.get("지원대상", "") or ""
+    special_keys = ("자립준비", "보호종료", "한부모", "다문화", "북한이탈", "탈북",
+                    "장애인", "국가유공", "기초생활수급", "차상위", "예술인",
+                    "제대군인", "출소", "보호관찰")
+    special_req = ((target or summary)[:80]
+                   if any(k in svc.get("서비스명", "") + summary + target
+                          for k in special_keys) else "")
 
     return {
         "id": f"GV-{svc.get('서비스ID', '')}",
@@ -168,6 +174,7 @@ def to_schema(svc, cond=None):
         "apply_start": start,
         "apply_end": end,
         "url": clean_url(svc.get("상세조회URL")),
+        "special_req": special_req,
         "status_label": "신청 가능",
         "benefit_score": min(1.0, 0.2 + (amount or 0) / 10_000_000 * 0.8) if amount else 0.3,
         "keywords": [w for w in re.findall(r"[가-힣]{2,}", svc.get("서비스명", ""))][:6],

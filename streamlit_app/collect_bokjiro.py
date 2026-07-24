@@ -56,8 +56,15 @@ def is_youth(item):
     return "청년" in item.get("lifeArray", "")
 
 
+SPECIAL_KEYS = ("자립준비", "보호종료", "한부모", "다문화", "북한이탈", "탈북",
+                "장애인", "국가유공", "기초생활수급", "차상위", "농업인", "예술인",
+                "제대군인", "출소", "보호관찰")
+
+
 def to_schema(item):
     summary = item.get("servDgst", "").replace("\n", " ")
+    text = item.get("servNm", "") + " " + summary
+    special_req = summary[:80] if any(k in text for k in SPECIAL_KEYS) else ""
     if len(summary) > 120:
         summary = summary[:117] + "..."
     link = item.get("servDtlLink", "")
@@ -74,6 +81,7 @@ def to_schema(item):
         "apply_start": "",
         "apply_end": "상시",
         "url": link,
+        "special_req": special_req,
         "status_label": "신청 가능",
         "benefit_score": 0.35,
         "keywords": [t for t in str(item.get("intrsThemaArray", "")).split(",") if t][:6],

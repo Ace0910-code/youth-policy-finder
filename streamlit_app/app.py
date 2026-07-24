@@ -915,8 +915,17 @@ def result_view():
 
 
 # ──────────────────────────────────────────────
-# 라우팅
+# 라우팅  (?demo=1 → 예시 프로필로 바로 결과 화면: 시연·캡처용 딥링크)
 # ──────────────────────────────────────────────
+if not st.session_state.submitted and st.query_params.get("demo") == "1":
+    st.session_state.profile = {
+        "name": "김청년", "age": 25, "region": "서울", "status": "대학생",
+        "school": "광운대학교", "housing_raw": "무주택", "housing": "무주택",
+        "income_label": "중위소득 120% 이하", "income_pct": 120,
+        "interests": ["주거·독립", "취업·이직"], "interest_text": "",
+    }
+    st.session_state.submitted = True
+
 if st.session_state.submitted:
     result_view()
 else:
