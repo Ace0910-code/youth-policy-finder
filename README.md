@@ -38,7 +38,8 @@
 ## 실행 방법
 
 ```bash
-pip install -r streamlit_app/requirements.txt
+pip install -r streamlit_app/requirements-full.txt   # 로컬 전체 기능(ko-sBERT 포함)
+# ※ 루트 requirements.txt는 Streamlit Cloud 배포용 경량 버전(키워드 매칭 폴백)
 
 # 1) 추천 엔진 단독 데모 (키 불필요)
 cd streamlit_app
