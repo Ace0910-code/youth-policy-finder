@@ -1,0 +1,7 @@
+# Streamlit Community Cloud 배포용 (경량)
+# ※ sentence-transformers는 무료 서버 메모리 한계로 제외 —
+#   앱이 자동으로 키워드 매칭 모드로 폴백하도록 설계돼 있음.
+#   로컬 전체 기능 실행은 streamlit_app/requirements.txt 사용.
+streamlit>=1.40
+pandas>=2.0
+requests>=2.31

@@ -1,0 +1,25 @@
+# 인증키·환경변수 (절대 커밋 금지)
+.env
+*.key
+secrets.toml
+.streamlit/secrets.toml
+
+# 수집 실데이터·캐시
+# (policies_real.json은 배포·시연을 위해 예외적으로 커밋 — 공공데이터라 공개 무방)
+streamlit_app/data/ontongyouth.json
+streamlit_app/data/gov24.json
+streamlit_app/data/bokjiro.json
+streamlit_app/data/scholarship.json
+streamlit_app/data/emb_cache_*.npy
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
