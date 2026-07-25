@@ -13,7 +13,7 @@ import streamlit as st
 
 from recommender import (UserProfile, load_policies, recommend, InterestMatcher,
                          estimate_total_support, format_amount, generate_one_liner,
-                         get_collected_at, is_direct_benefit)
+                         get_collected_at, is_direct_benefit, diagnose_no_results)
 from chatbot import answer as chat_answer
 
 st.set_page_config(page_title="눈 떠보니 지원 대상이었습니다", page_icon="👀",
@@ -181,6 +181,9 @@ INCOME_OPTS = {
     "중위소득 100% 이하": 100, "중위소득 120% 이하": 120, "중위소득 150% 이하": 150,
     "중위소득 180% 이하": 180, "중위소득 200% 이하": 200, "중위소득 200% 초과": 999,
 }
+# 2026년 기준 중위소득 100% (보건복지부 고시, 월 기준 원) — 소득 간단 계산용
+MEDIAN_INCOME_2026 = {1: 2_564_238, 2: 4_199_292, 3: 5_359_036,
+                      4: 6_494_738, 5: 7_556_719, 6: 8_555_952}
 INTEREST_OPTS = ["주거·독립", "취업·이직", "창업", "학비·장학금",
                  "자기계발·교육", "생활비·교통", "문화·여가", "자산형성"]
 # 관심분야 태그 → 정책 분야(카테고리) — 결과 화면 '관심 분야' 필터 옵션 구성용
@@ -379,8 +382,31 @@ def input_view():
             income_keys = list(INCOME_OPTS.keys())
             income_label = st.selectbox(
                 "가구 소득 수준 (기준 중위소득)", income_keys,
-                index=income_keys.index(p.get("income_label", "잘 모르겠어요")),
-                help="잘 모르면 '잘 모르겠어요'를 선택하세요. 소득 조건이 있는 정책은 체크리스트로 안내해 드려요.")
+                index=income_keys.index(p.get("income_label", "잘 모르겠어요"))
+                if p.get("income_label") in income_keys else 0,
+                help="⚠️ '가구' 기준이에요. 주민등록상 같은 세대의 소득을 합산합니다 — "
+                     "부모님과 같은 세대면 부모님 소득 포함, 세대분리된 1인 가구면 본인 소득만. "
+                     "잘 모르면 '잘 모르겠어요'를 선택하고 아래 간단 계산을 이용하세요.")
+            with st.expander("🧮 소득 구간 간단 계산 — '잘 모르겠어요'를 선택했다면 여기로"):
+                st.markdown("<div class='yf-muted' style='font-size:12px;'>"
+                            "2026년 기준 중위소득(보건복지부 고시)으로 자동 계산해요. "
+                            "아르바이트 소득은 월평균으로 환산해 주세요 "
+                            "(예: 주 3회 × 4시간 × 시급 1만원 ≈ 월 52만원).</div>",
+                            unsafe_allow_html=True)
+                calc_c1, calc_c2, calc_c3 = st.columns(3)
+                sep = calc_c1.selectbox(
+                    "세대 구분", ["부모님과 같은 세대 (미분리)", "세대분리 (독립 세대)"],
+                    index=0 if p.get("sep", "미분리") == "미분리" else 1,
+                    help="주민등록등본 기준. 자취를 해도 전입신고로 세대분리를 안 했다면 "
+                         "'미분리'이며, 이 경우 부모님 소득까지 합산됩니다.")
+                hh_size = calc_c2.number_input(
+                    "가구원 수 (본인 포함)", 1, 10, int(p.get("hh_size", 3)),
+                    help="미분리면 부모님 세대 인원 전체, 세대분리 1인 가구면 1")
+                monthly = calc_c3.number_input(
+                    "가구 월 소득 (세전, 만원)", 0, 5000, int(p.get("monthly_income", 0)),
+                    step=10,
+                    help="같은 세대 전원의 월 소득 합계. 0이면 계산 안 함. "
+                         "연 소득만 알면 12로 나눠 입력 (예: 연 3,000만원 → 250)")
 
             st.markdown(f"<div style='font-weight:800; font-size:15.5px; color:#2D2A45; "
                         f"margin-top:4px;'>🎯 관심분야 <span class='yf-muted' "
@@ -393,11 +419,22 @@ def input_view():
                                           placeholder="예: 자취 중이라 월세가 부담되고, 취업 준비에 필요한 자격증 공부 중이에요")
 
             if st.form_submit_button("🔍 내가 받을 수 있는 정책 분석하기"):
+                income_pct = INCOME_OPTS[income_label]
+                final_income_label = income_label
+                sep_short = "미분리" if "미분리" in sep else "세대분리"
+                if income_label == "잘 모르겠어요" and monthly > 0:
+                    # 간단 계산: 가구 월소득 ÷ 가구원수별 2026 기준 중위소득 → %
+                    median = MEDIAN_INCOME_2026[min(int(hh_size), 6)]
+                    income_pct = min(999, round(monthly * 10_000 / median * 100))
+                    final_income_label = (f"직접 계산: 중위소득 약 {income_pct}% "
+                                          f"({int(hh_size)}인 가구·{sep_short})")
                 st.session_state.profile = {
                     "name": name.strip() or "청년", "age": int(age), "region": region,
                     "status": status, "school": school.strip(),
                     "housing_raw": housing, "housing": "무주택" if housing == "무주택" else "자가",
-                    "income_label": income_label, "income_pct": INCOME_OPTS[income_label],
+                    "income_label": final_income_label, "income_pct": income_pct,
+                    "sep": sep_short, "hh_size": int(hh_size),
+                    "monthly_income": int(monthly),
                     "interests": interests, "interest_text": interest_text.strip(),
                 }
                 st.session_state.submitted = True
@@ -891,12 +928,24 @@ def result_view():
         left_panel(user, results)
     with center:
         if not results:
-            st.markdown(f'<div class="yf-card" style="text-align:center;padding:60px;">'
+            # 재질의 진단: 어떤 조건에서 탈락했는지 집계해 완화 방향 안내
+            blockers = diagnose_no_results(user, policies, as_of)
+            top = [(k, v) for k, v in blockers.most_common()
+                   if k not in ("통과", "마감 종료")][:3]
+            diag = "".join(
+                f'<div style="display:flex;justify-content:space-between;padding:6px 14px;'
+                f'border-bottom:1px solid {LINE};font-size:13px;">'
+                f'<span style="color:#4B5163;">{k}에서 탈락</span>'
+                f'<span style="font-weight:700;color:{PURPLE};">{v:,}건</span></div>'
+                for k, v in top)
+            st.markdown(f'<div class="yf-card" style="text-align:center;padding:40px 40px 24px;">'
                         f'<div style="font-size:40px;">🥲</div>'
                         f'<div style="font-weight:800;font-size:18px;color:#2D2A45;margin:8px 0;">'
                         f'조건에 맞는 정책을 찾지 못했어요</div>'
-                        f'<div class="yf-muted">나이·지역·소득 조건을 조정해 다시 분석해 보세요.</div></div>',
-                        unsafe_allow_html=True)
+                        f'<div class="yf-muted" style="margin-bottom:14px;">무엇이 걸림돌이었는지 '
+                        f'진단해 봤어요 — 아래 조건을 조정하면 길이 열립니다.</div>'
+                        f'<div style="max-width:420px;margin:0 auto;text-align:left;">{diag}</div>'
+                        f'</div>', unsafe_allow_html=True)
             st.button("✏️ 조건 수정하기", on_click=go_edit)
         else:
             center_panel(user, results)

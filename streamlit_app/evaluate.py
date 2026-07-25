@@ -175,10 +175,12 @@ def build_personas():
 # ──────────────────────────────────────────────
 # 평가 실행
 # ──────────────────────────────────────────────
-def evaluate(use_embeddings=True, k=5, data_path=None):
+def evaluate(use_embeddings=True, k=5, data_path=None, model_name=None):
     policies, as_of = load_policies(data_path)
     personas = build_personas()
-    matcher = InterestMatcher(policies, use_embeddings=use_embeddings, verbose=True)
+    kwargs = {"model_name": model_name} if model_name else {}
+    matcher = InterestMatcher(policies, use_embeddings=use_embeddings, verbose=True,
+                              **kwargs)
 
     rows, agg = [], {"p5": [], "p5_adj": [], "r5": [], "r10": [], "hit": [],
                      "elig_acc": [], "filter_miss": 0, "rank_fp": 0}

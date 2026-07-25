@@ -206,15 +206,23 @@ def _policy_text(p):
                      p.get("summary", ""), " ".join(p.get("keywords", []))])
 
 
-class InterestMatcher:
-    """정책 임베딩은 데이터 해시 기준으로 캐싱, 질의 임베딩은 인스턴스 내 캐싱."""
+DEFAULT_EMBED_MODEL = "jhgan/ko-sroberta-multitask"
 
-    def __init__(self, policies, use_embeddings=True, cache_dir=DATA_DIR, verbose=False):
+
+class InterestMatcher:
+    """정책 임베딩은 (모델명+데이터) 해시 기준으로 캐싱, 질의 임베딩은 인스턴스 내 캐싱.
+    FAISS가 설치돼 있으면 벡터 검색 인덱스를 사용(수만 건 규모 확장 대비),
+    없으면 NumPy 내적으로 동작한다."""
+
+    def __init__(self, policies, use_embeddings=True, cache_dir=DATA_DIR, verbose=False,
+                 model_name=DEFAULT_EMBED_MODEL):
         self.policies = policies
         self.mode = "keyword"
+        self.model_name = model_name
         self._query_cache = {}
         self._emb = None
         self._model = None
+        self._faiss_index = None
         if use_embeddings:
             try:
                 self._init_embeddings(cache_dir, verbose)
@@ -223,27 +231,44 @@ class InterestMatcher:
                 if verbose:
                     print(f"[matcher] 임베딩 사용 불가({type(ex).__name__}) → 키워드 매칭 폴백")
 
+    def _prefix(self, text, kind):
+        """e5 계열은 query:/passage: 프리픽스가 권장 사용법"""
+        if "e5" in self.model_name.lower():
+            return f"{'query' if kind == 'q' else 'passage'}: {text}"
+        return text
+
     def _init_embeddings(self, cache_dir, verbose):
         import hashlib
         import numpy as np
         from sentence_transformers import SentenceTransformer
 
         texts = [_policy_text(p) for p in self.policies]
-        key = hashlib.md5("|".join(texts).encode("utf-8")).hexdigest()[:12]
+        key = hashlib.md5((self.model_name + "|" + "|".join(texts))
+                          .encode("utf-8")).hexdigest()[:12]
         cache_path = os.path.join(cache_dir, f"emb_cache_{key}.npy")
 
-        self._model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+        self._model = SentenceTransformer(self.model_name)
         if os.path.exists(cache_path):
             self._emb = np.load(cache_path)
             if verbose:
                 print(f"[matcher] 정책 임베딩 캐시 로드: {os.path.basename(cache_path)}")
         else:
             if verbose:
-                print(f"[matcher] 정책 {len(texts)}건 임베딩 생성 중...")
-            self._emb = self._model.encode(texts, normalize_embeddings=True,
+                print(f"[matcher] 정책 {len(texts)}건 임베딩 생성 중... ({self.model_name})")
+            self._emb = self._model.encode([self._prefix(t, "p") for t in texts],
+                                           normalize_embeddings=True,
                                            show_progress_bar=False)
             os.makedirs(cache_dir, exist_ok=True)
             np.save(cache_path, self._emb)
+        # FAISS 인덱스 (선택) — 코사인 = 정규화 벡터 내적(IndexFlatIP)
+        try:
+            import faiss
+            self._faiss_index = faiss.IndexFlatIP(self._emb.shape[1])
+            self._faiss_index.add(np.ascontiguousarray(self._emb, dtype="float32"))
+            if verbose:
+                print(f"[matcher] FAISS 인덱스 구축 ({self._emb.shape[0]}×{self._emb.shape[1]})")
+        except ImportError:
+            self._faiss_index = None
 
     def score(self, query):
         """질의 대비 각 정책의 관심분야 일치도 0~1 리스트."""
@@ -257,10 +282,19 @@ class InterestMatcher:
         import numpy as np
         if query not in self._query_cache:
             self._query_cache[query] = self._model.encode(
-                [query], normalize_embeddings=True, show_progress_bar=False)[0]
+                [self._prefix(query, "q")], normalize_embeddings=True,
+                show_progress_bar=False)[0]
         q = self._query_cache[query]
-        sims = self._emb @ q                       # normalize됨 → 내적 = cosine
-        # cosine(-1~1) → 0~1 구간으로 완만하게 정규화 (ko-sroberta는 대개 0.1~0.7 분포)
+        if self._faiss_index is not None:          # FAISS: 전 건 유사도 조회
+            sims, idx = self._faiss_index.search(
+                np.ascontiguousarray(q[None, :], dtype="float32"),
+                len(self.policies))
+            order = np.empty(len(self.policies), dtype="float32")
+            order[idx[0]] = sims[0]
+            sims = order
+        else:
+            sims = self._emb @ q                   # normalize됨 → 내적 = cosine
+        # cosine(-1~1) → 0~1 구간으로 완만하게 정규화
         return [float(min(1.0, max(0.0, (s - 0.05) / 0.55))) for s in sims]
 
     def _score_keyword(self, query):
@@ -329,6 +363,44 @@ def _feasibility_score(policy, as_of):
 def is_deadline_soon(policy, as_of, within=7):
     d = days_left(policy, as_of)
     return d is not None and 0 <= d <= within
+
+
+def diagnose_no_results(user, policies, as_of):
+    """추천 0건(또는 소수)일 때 재질의 진단 — 각 정책이 '처음 걸린 조건'을 집계해
+    어떤 조건을 완화하면 몇 건이 열리는지 알려준다."""
+    from collections import Counter
+    blockers = Counter()
+    for p in policies:
+        e = p.get("eligibility", {}) or {}
+        d = days_left(p, as_of)
+        if d is not None and d < 0:
+            blockers["마감 종료"] += 1
+            continue
+        a_min = e.get("age_min") or 0
+        a_max = e.get("age_max") or 0
+        if a_max in (0, None):
+            a_min, a_max = a_min or 0, 200
+        if not (a_min <= user.age <= a_max):
+            blockers["나이 조건"] += 1
+            continue
+        regions = e.get("regions") or ["전국"]
+        if "전국" not in regions and user.region not in regions:
+            blockers["지역 조건"] += 1
+            continue
+        req = e.get("status") or []
+        if req and not (STATUS_SYNONYMS.get(user.status, {user.status}) & set(req)):
+            blockers["직업·상태 조건"] += 1
+            continue
+        hous = e.get("housing") or []
+        if hous and user.housing not in hous:
+            blockers["주거 조건"] += 1
+            continue
+        cap = e.get("income_max_pct")
+        if cap is not None and user.income_pct is not None and user.income_pct > cap:
+            blockers["소득 조건"] += 1
+            continue
+        blockers["통과"] += 1
+    return blockers
 
 
 def get_collected_at(path=None):
