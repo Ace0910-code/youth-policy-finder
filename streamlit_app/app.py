@@ -135,6 +135,13 @@ div[data-testid="stExpanderDetails"] {{
   background:#FBFBFE; border:1px solid {LINE}; border-radius:12px;
   padding:0.7rem 1rem; margin-top:2px;
 }}
+/* 폼 안의 expander(소득 간단 계산)는 위 당김 없이 일반 배치 + 왼쪽 정렬 */
+div[data-testid="stForm"] div[data-testid="stExpander"] {{
+  margin-top:2px;
+}}
+div[data-testid="stForm"] div[data-testid="stExpander"] summary {{
+  justify-content:flex-start; font-size:13px;
+}}
 
 /* 입력 폼 */
 div[data-testid="stForm"] {{
@@ -370,17 +377,20 @@ def input_view():
                         unsafe_allow_html=True)
             c1, c2 = st.columns(2)
             name = c1.text_input("이름(별명)", value=p.get("name", ""), placeholder="예: 김청년")
-            age = c2.number_input("나이(만)", 15, 49, int(p.get("age", 25)))
+            age_opts = list(range(15, 50))
+            age = c2.selectbox("나이(만)", age_opts,
+                               index=age_opts.index(int(p.get("age", 25)))
+                               if int(p.get("age", 25)) in age_opts else 10,
+                               format_func=lambda n: f"만 {n}세")
             c3, c4 = st.columns(2)
             region = c3.selectbox("거주지(시·도)", SIDO, index=SIDO.index(p.get("region", "서울")))
             status = c4.selectbox("직업·상태", STATUS_OPTS,
                                   index=STATUS_OPTS.index(p.get("status", "대학생")))
             c5, c6 = st.columns(2)
-            school = c5.text_input("학교(선택)", value=p.get("school", ""), placeholder="예: 광운대학교")
-            housing = c6.selectbox("주거 형태", HOUSING_OPTS,
+            housing = c5.selectbox("주거 형태", HOUSING_OPTS,
                                    index=HOUSING_OPTS.index(p.get("housing_raw", "무주택")))
             income_keys = list(INCOME_OPTS.keys())
-            income_label = st.selectbox(
+            income_label = c6.selectbox(
                 "가구 소득 수준 (기준 중위소득)", income_keys,
                 index=income_keys.index(p.get("income_label", "잘 모르겠어요"))
                 if p.get("income_label") in income_keys else 0,
@@ -430,7 +440,7 @@ def input_view():
                                           f"({int(hh_size)}인 가구·{sep_short})")
                 st.session_state.profile = {
                     "name": name.strip() or "청년", "age": int(age), "region": region,
-                    "status": status, "school": school.strip(),
+                    "status": status, "school": "",
                     "housing_raw": housing, "housing": "무주택" if housing == "무주택" else "자가",
                     "income_label": final_income_label, "income_pct": income_pct,
                     "sep": sep_short, "hh_size": int(hh_size),
@@ -569,14 +579,14 @@ def stat_card_html(icon, icon_bg, label, value, sub="", value_color="#2D2A45"):
 
 
 INFO_ICONS = {"이름": "💧", "나이": "🎂", "거주지": "📍", "직업/상태": "💼",
-              "학교": "🏫", "주거 형태": "🏠", "소득 구간": "💳", "관심 분야": "💜"}
+              "주거 형태": "🏠", "소득 구간": "💳", "관심 분야": "💜"}
 
 
 def left_panel(user, results):
     prof = st.session_state.profile
     rows = [
         ("이름", user.name), ("나이", f"{user.age}세"), ("거주지", user.region),
-        ("직업/상태", user.status), ("학교", prof.get("school") or "-"),
+        ("직업/상태", user.status),
         ("주거 형태", prof.get("housing_raw", user.housing)),
         ("소득 구간", prof.get("income_label", "-")),
         ("관심 분야", ", ".join(user.interests) or "-"),
@@ -969,7 +979,7 @@ def result_view():
 if not st.session_state.submitted and st.query_params.get("demo") == "1":
     st.session_state.profile = {
         "name": "김청년", "age": 25, "region": "서울", "status": "대학생",
-        "school": "광운대학교", "housing_raw": "무주택", "housing": "무주택",
+        "school": "", "housing_raw": "무주택", "housing": "무주택",
         "income_label": "중위소득 120% 이하", "income_pct": 120,
         "interests": ["주거·독립", "취업·이직"], "interest_text": "",
     }
