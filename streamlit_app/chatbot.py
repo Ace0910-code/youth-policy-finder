@@ -106,6 +106,26 @@ def hybrid_rank(question, results, matcher):
     return scored
 
 
+_ORDINAL_WORDS = {"첫": 1, "두": 2, "세": 3, "네": 4, "다섯": 5,
+                  "여섯": 6, "일곱": 7, "여덟": 8, "아홉": 9, "열": 10}
+
+
+def _ordinal_index(question):
+    """'첫 번째 정책'·'2번 정책'·'마지막 정책' 같은 순서 지칭 → 추천 목록 인덱스"""
+    q = question.replace(" ", "")
+    m = re.search(r"(첫|두|세|네|다섯|여섯|일곱|여덟|아홉|열)번째", q)
+    if m:
+        return _ORDINAL_WORDS[m.group(1)] - 1
+    m = re.search(r"(\d{1,2})번(?:째)?(?:정책|거|것|추천)", q)
+    if m and int(m.group(1)) >= 1:
+        return int(m.group(1)) - 1
+    if re.search(r"(맨위|제일위|첫)(정책|거|것|추천)", q):
+        return 0
+    if "마지막" in q:
+        return -1
+    return None
+
+
 def find_policy(question, results, matcher, last_policy_id=None, intents=None):
     """질문이 가리키는 정책 1건 (없으면 None)"""
     qn = _norm(question)
@@ -114,6 +134,10 @@ def find_policy(question, results, matcher, last_policy_id=None, intents=None):
              if len(_norm(r["name"])) >= 4 and _norm(r["name"]) in qn]
     if named:
         return max(named, key=lambda r: len(_norm(r["name"])))
+    # ①-2 순서 지칭 ("첫 번째 정책 신청 방법") — 추천 목록 순위로 해석
+    idx = _ordinal_index(question)
+    if idx is not None and -len(results) <= idx < len(results):
+        return results[idx]
 
     def last_policy():
         if last_policy_id and intents and (set(intents) & FOLLOWUP_INTENTS):
@@ -211,6 +235,7 @@ def _general_answer(question, results, matcher, user):
     if not ranked:
         return ("질문과 관련된 정책을 추천 목록에서 찾지 못했어요. 🥲\n"
                 "- 정책 이름을 함께 적어주시거나 (예: \"청년월세 신청 방법\")\n"
+                "- \"첫 번째 정책\"처럼 추천 순서로 물어봐도 돼요\n"
                 "- \"월세\", \"장학금\", \"자격증\" 같은 키워드로 물어봐 주세요.")
     lines = [f"질문과 관련해 {user.name}님이 신청을 검토할 수 있는 정책이에요:"]
     for i, (r, s) in enumerate(ranked, 1):
