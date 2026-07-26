@@ -155,8 +155,20 @@ div[data-testid="stForm"] .stButton>button {{padding:0.55rem; font-size:15px;}}
 # ──────────────────────────────────────────────
 # 데이터 & 매처 캐싱
 # ──────────────────────────────────────────────
+import recommender as _rec
+
+
+def _data_mtime():
+    """정책 데이터 파일 수정시각 — 데이터 갱신 시 캐시 자동 무효화 키"""
+    for path in (_rec.REAL_DATA, _rec.DEFAULT_DATA):
+        if os.path.exists(path):
+            return os.path.getmtime(path)
+    return 0.0
+
+
 @st.cache_data(show_spinner=False)
-def _load():
+def _load(data_mtime=None):
+    # data_mtime은 캐시 키 전용 — 데이터 파일이 갱신되면 자동으로 다시 읽는다
     return load_policies()
 
 
@@ -174,7 +186,7 @@ def _asset_b64(name):
 @st.cache_resource(show_spinner="관심분야 매칭 모델 준비 중...")
 def _matcher(cache_key):
     """cache_key = (정책 수, 기준일) — 데이터가 갱신되면 자동으로 재생성"""
-    policies, _ = _load()
+    policies, _ = _load(_data_mtime())
     return InterestMatcher(policies, use_embeddings=True)
 
 
@@ -915,7 +927,7 @@ def result_view():
         loading_view(user)
         import time
         t0 = time.time()
-        policies, as_of = _load()
+        policies, as_of = _load(_data_mtime())
         matcher = _matcher((len(policies), str(as_of)))
         st.session_state._precomputed = (recommend(user, policies, as_of,
                                                    matcher=matcher), str(as_of))
@@ -924,7 +936,7 @@ def result_view():
         st.session_state.reanalyzing = False
         st.rerun()
 
-    policies, as_of = _load()
+    policies, as_of = _load(_data_mtime())
     matcher = _matcher((len(policies), str(as_of)))
     pre = st.session_state.pop("_precomputed", None)
     if pre is not None and pre[1] == str(as_of):   # 로딩 화면에서 미리 계산한 결과 재사용

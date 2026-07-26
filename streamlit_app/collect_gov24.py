@@ -113,6 +113,9 @@ def clean_url(u):
     """URL 정제: 이중 스킴·공백·비URL 텍스트 방어, 스킴 보정"""
     u = str(u or "").strip()
     u = re.sub(r"^(https?://)+(?=https?://)", "", u)
+    # 'http//'·'https:'·'http;//' 같은 오타 스킴 정규화
+    u = re.sub(r"^(https?)(?=[:;/])[:;]?/{0,2}(?!/)",
+               lambda m: m.group(1).lower() + "://", u, flags=re.I)
     if " " in u:
         u = u.split()[0]
     if not u or re.search(r"[가-힣]", u) or "." not in u:

@@ -114,6 +114,9 @@ def to_schema(row):
 
     url = str(row.get("홈페이지 주소", "") or "").strip()
     url = re.sub(r"^(https?://)+(?=https?://)", "", url)   # 'http://http://…' 오타 교정
+    # 'http//'·'https:'·'http;//' 같은 오타 스킴 정규화
+    url = re.sub(r"^(https?)(?=[:;/])[:;]?/{0,2}(?!/)",
+                 lambda m: m.group(1).lower() + "://", url, flags=re.I)
     if " " in url:
         url = url.split()[0]
     if re.search(r"[가-힣]", url) or "." not in url:
