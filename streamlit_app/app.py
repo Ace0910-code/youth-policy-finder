@@ -613,7 +613,7 @@ def left_panel(user, results):
 
     h1, h2 = st.columns([2.1, 1.1])
     h1.markdown(f"<div style='font-weight:800;font-size:13.5px;color:{PURPLE};"
-                f"padding-top:6px;'>{user.name} 님의 정보</div>", unsafe_allow_html=True)
+                f"padding-top:6px;'>{user.name}님의 정보</div>", unsafe_allow_html=True)
     with h2:
         st.button("✏️ 수정하기", on_click=go_edit, use_container_width=True,
                   key="edit_profile_btn")
@@ -651,7 +651,7 @@ def center_panel(user, results):
     with h1:
         st.markdown(f"""
 <div style="font-size:22px;font-weight:800;color:#2D2A45;">
-  <span style="color:{PURPLE};">{user.name}님</span> 에게 추천하는 청년정책 ✨</div>
+  <span style="color:{PURPLE};">{user.name}님</span>에게 추천하는 청년정책 ✨</div>
 <div class="yf-muted" style="margin-top:3px;">{collected} 수집 데이터 기준으로 분석된 결과입니다.</div>
 """, unsafe_allow_html=True)
     with h2:
