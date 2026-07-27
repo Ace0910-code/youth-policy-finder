@@ -5,3 +5,4 @@
 streamlit>=1.40
 pandas>=2.0
 requests>=2.31
+numpy>=1.26          # 사전계산 임베딩 팩(emb_pack.npz) 내적 계산용

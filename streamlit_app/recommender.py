@@ -91,6 +91,11 @@ def load_policies(path=None):
 # ──────────────────────────────────────────────
 # 사용자 프로필
 # ──────────────────────────────────────────────
+# 관심분야 태그 카탈로그 (app.py INTEREST_OPTS와 동일 순서 — 질의 정규화·팩 생성 기준)
+INTEREST_CATALOG = ["주거·독립", "취업·이직", "창업", "학비·장학금",
+                    "자기계발·교육", "생활비·교통", "문화·여가", "자산형성"]
+
+
 @dataclass
 class UserProfile:
     name: str = "청년"
@@ -104,7 +109,11 @@ class UserProfile:
     interest_text: str = ""         # 자유 텍스트
 
     def interest_query(self):
-        parts = list(self.interests)
+        # 태그는 카탈로그 순서로 정규화 — 선택 순서와 무관하게 동일 질의 문자열이
+        # 되어 사전계산 임베딩 팩(emb_pack)과 정확히 대조된다
+        parts = sorted(self.interests,
+                       key=lambda t: (INTEREST_CATALOG.index(t)
+                                      if t in INTEREST_CATALOG else 99, t))
         if self.interest_text.strip():
             parts.append(self.interest_text.strip())
         return " ".join(parts) if parts else ""
@@ -227,9 +236,16 @@ class InterestMatcher:
             try:
                 self._init_embeddings(cache_dir, verbose)
                 self.mode = "embedding"
-            except Exception as ex:            # 모델 없음/로드 실패 → 키워드 폴백
-                if verbose:
-                    print(f"[matcher] 임베딩 사용 불가({type(ex).__name__}) → 키워드 매칭 폴백")
+            except Exception as ex:            # 모델 없음/로드 실패
+                # 배포 서버 등 모델이 없는 환경: 사전계산 임베딩 팩이 있으면
+                # numpy 내적만으로 로컬과 동일한 의미 매칭을 수행한다
+                try:
+                    self._init_precomputed(cache_dir, verbose)
+                    self.mode = "precomputed"
+                except Exception as ex2:       # 팩도 없음/불일치 → 키워드 폴백
+                    if verbose:
+                        print(f"[matcher] 임베딩 불가({type(ex).__name__}), "
+                              f"팩 불가({type(ex2).__name__}) → 키워드 매칭 폴백")
 
     def _prefix(self, text, kind):
         """e5 계열은 query:/passage: 프리픽스가 권장 사용법"""
@@ -270,12 +286,39 @@ class InterestMatcher:
         except ImportError:
             self._faiss_index = None
 
+    def _policies_key(self):
+        import hashlib
+        texts = [_policy_text(p) for p in self.policies]
+        return hashlib.md5((self.model_name + "|" + "|".join(texts))
+                           .encode("utf-8")).hexdigest()[:12]
+
+    def _init_precomputed(self, cache_dir, verbose):
+        """빌드해 둔 emb_pack.npz 로드 — 정책 임베딩 + 관심 태그 조합 질의 임베딩"""
+        import numpy as np
+        pack_path = os.path.join(cache_dir, "emb_pack.npz")
+        pack = np.load(pack_path, allow_pickle=False)
+        if str(pack["policy_key"]) != self._policies_key():
+            raise ValueError("emb_pack이 현재 정책 데이터와 불일치 — 재생성 필요 "
+                             "(python build_emb_pack.py)")
+        self._emb = pack["policy_emb"]
+        self._pack_queries = {q: i for i, q in enumerate(pack["query_texts"].tolist())}
+        self._pack_query_emb = pack["query_emb"]
+        if verbose:
+            print(f"[matcher] 사전계산 임베딩 팩 로드: 정책 {self._emb.shape[0]}건, "
+                  f"질의 {len(self._pack_queries)}종")
+
     def score(self, query):
         """질의 대비 각 정책의 관심분야 일치도 0~1 리스트."""
         if not query.strip():
             return [0.5] * len(self.policies)     # 관심분야 미입력 → 중립
         if self.mode == "embedding":
             return self._score_embedding(query)
+        if self.mode == "precomputed":
+            idx = self._pack_queries.get(query)
+            if idx is not None:
+                sims = self._emb @ self._pack_query_emb[idx]
+                return [float(min(1.0, max(0.0, (s - 0.05) / 0.55))) for s in sims]
+            return self._score_keyword(query)     # 자유 텍스트 포함 → 키워드 보조
         return self._score_keyword(query)
 
     def _score_embedding(self, query):

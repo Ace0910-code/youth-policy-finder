@@ -101,6 +101,14 @@ def main():
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"  → {len(merged)}건 저장: {OUT_PATH} (기준일 {payload['as_of']})")
 
+    # 사전계산 임베딩 팩 재생성 (배포 서버가 로컬과 동일한 순위를 내도록)
+    try:
+        import build_emb_pack
+        build_emb_pack.build(verbose=True)
+    except Exception as ex:
+        print(f"  ⚠️ emb_pack 재생성 실패({type(ex).__name__}) — 배포 앱은 "
+              "키워드 폴백으로 동작합니다. 수동: python build_emb_pack.py")
+
     print("\n[2/2] 실데이터 추천 데모")
     from recommender import (UserProfile, recommend, load_policies,
                              estimate_total_support, format_amount, generate_one_liner)
