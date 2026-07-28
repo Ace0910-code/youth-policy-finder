@@ -15,24 +15,16 @@
 
 ```mermaid
 flowchart TB
-    subgraph C1["📥 데이터 수집 계층 — 하루 1회 배치"]
-        direction LR
-        A1["온통청년 API<br/>★핵심"]
-        A2["정부24 serviceList<br/>supportConditions 조인"]
-        A3["복지로 XML<br/>생애주기 청년 필터"]
-        A4["한국장학재단<br/>학자금지원정보"]
-    end
-    C1 --> M["demo_realdata.py — 병합·중복 제거 → policies_real.json 3,988건<br/>(키 없으면 샘플 30건 policies.json으로 완전 동작)"]
-    M --> C2
-    subgraph C2["🧠 추천 엔진 — recommender.py"]
-        direction TB
+    A["📥 데이터 수집 계층 — 하루 1회 배치<br/>온통청년 API ★핵심 · 정부24 serviceList+supportConditions 조인 · 복지로 XML · 한국장학재단"]
+    A --> M["demo_realdata.py — 병합·중복 제거 → policies_real.json 3,988건<br/>(키 없으면 샘플 30건 policies.json으로 완전 동작)"]
+    M --> B1
+    subgraph E["🧠 추천 엔진 — recommender.py"]
         B1["① 규칙 기반 자격 필터 (결정론적)<br/>나이·지역·소득·직업상태·주거·마감일 — LLM 불관여 = 환각 차단"]
-        B2["② 의미 기반 관심분야 매칭<br/>ko-sBERT + FAISS cosine — 모델 없으면 사전계산 임베딩 팩 → 키워드 순 폴백"]
-        B3["③ 가중 스코어 → 적합도(%)<br/>신청가능성 0.40 · 관심분야 0.35 · 지원효과 0.10 · 마감임박 0.10 · 실행가능성 0.05"]
-        B4["④ 설명 생성 (설명 전용)<br/>추천 이유 · AI 한줄 요약 · 신청 전 체크리스트"]
-        B1 --> B2 --> B3 --> B4
+        B1 --> B2["② 의미 기반 관심분야 매칭<br/>ko-sBERT + FAISS cosine — 모델 없으면 사전계산 임베딩 팩 → 키워드 순 폴백"]
+        B2 --> B3["③ 가중 스코어 → 적합도(%)<br/>신청가능성 0.40 · 관심분야 0.35 · 지원효과 0.10 · 마감임박 0.10 · 실행가능성 0.05"]
+        B3 --> B4["④ 설명 생성 (설명 전용)<br/>추천 이유 · AI 한줄 요약 · 신청 전 체크리스트"]
     end
-    C2 --> C3["🖥️ UI — app.py (Streamlit)<br/>입력 화면 → 결과 대시보드(내 정보·스탯·필터·정책카드·TOP3)<br/>+ 정책 Q&A 챗봇 chatbot.py — 검색은 AI, 답변은 검증된 데이터 필드만"]
+    B4 --> U["🖥️ UI — app.py (Streamlit)<br/>입력 화면 → 결과 대시보드(내 정보·스탯·필터·정책카드·TOP3)<br/>+ 정책 Q&A 챗봇 chatbot.py — 검색은 AI, 답변은 검증된 데이터 필드만"]
 
     style B1 fill:#F0EEFD,stroke:#6C5CE7
     style M fill:#2D2A45,color:#fff
