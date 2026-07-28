@@ -14,6 +14,7 @@
 ![전체 서비스 아키텍처](docs/architecture.png)
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 520}}}%%
 flowchart TB
     A["📥 데이터 수집 계층 — 하루 1회 배치<br/>온통청년 API ★핵심 · 정부24 serviceList+supportConditions 조인 · 복지로 XML · 한국장학재단"]
     A --> M["demo_realdata.py — 병합·중복 제거 → policies_real.json 3,988건<br/>(키 없으면 샘플 30건 policies.json으로 완전 동작)"]
