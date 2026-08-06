@@ -1,6 +1,6 @@
 {
-  "as_of": "2026.08.05",
-  "collected_at": "2026.08.05 14:39",
+  "as_of": "2026.08.06",
+  "collected_at": "2026.08.06 11:48",
   "policies": [
     {
       "id": "OY-20260804005400213319",
@@ -89,35 +89,6 @@
       }
     },
     {
-      "id": "OY-20260731005400213314",
-      "name": "[8월 접수] 2026년 구직청년 자격증 취득지원 사업(8월 3일 10시 접수 예정)",
-      "category": "생활·교통",
-      "org": "전남광주통합특별시",
-      "summary": "구직활동에 필요한 어학 자격증 시험 응시료 지원",
-      "amount_max": null,
-      "amount_label": "",
-      "apply_start": "2026.08.03",
-      "apply_end": "2026.08.31",
-      "url": "https://youth.gwangju.go.kr/www/50?formSeq=130&mapngColumn=policy_id&mapngId=1408&url=%2Fwww%2Fform%2FapplFormView",
-      "special_req": "",
-      "status_label": "신청 가능",
-      "benefit_score": 0.3,
-      "keywords": [
-        "교육지원"
-      ],
-      "eligibility": {
-        "age_min": 19,
-        "age_max": 39,
-        "regions": [
-          "전남",
-          "광주"
-        ],
-        "income_max_pct": null,
-        "status": [],
-        "housing": []
-      }
-    },
-    {
       "id": "OY-20260729005400213313",
       "name": "전남광주 기후에너지 JOB 스쿨 참가자 모집",
       "category": "취업·창업",
@@ -161,45 +132,16 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
         "바우처",
-        "주거지원",
-        "인턴"
+        "교육지원",
+        "인턴",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
         "age_max": 39,
         "regions": [
           "충남"
-        ],
-        "income_max_pct": null,
-        "status": [],
-        "housing": []
-      }
-    },
-    {
-      "id": "OY-20260728005400213311",
-      "name": "전남광주 청년 문화복지카드",
-      "category": "생활·교통",
-      "org": "전남광주통합특별시",
-      "summary": "전남광주통합특별시 22개 시 군에 거주하는 청년을 대상으로 공연관람, 학원수강, 도서구입 등을 위한 문화복지비 연 25만원 지원",
-      "amount_max": 250000,
-      "amount_label": "최대 25만원",
-      "apply_start": "2026.08.03",
-      "apply_end": "2026.08.31",
-      "url": "https://youth.gwangju.go.kr/www/50?siteId=www&policyId=1409&url=%2Fwww%2Fpolicy%2FgjYgPolicyView",
-      "special_req": "",
-      "status_label": "신청 가능",
-      "benefit_score": 0.22000000000000003,
-      "keywords": [
-        "보조금"
-      ],
-      "eligibility": {
-        "age_min": 19,
-        "age_max": 29,
-        "regions": [
-          "전남",
-          "광주"
         ],
         "income_max_pct": null,
         "status": [],
@@ -826,8 +768,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -1379,8 +1321,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -1604,8 +1546,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "맞춤형상담서비스",
-        "장기미취업청년"
+        "장기미취업청년",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 15,
@@ -1633,8 +1575,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
         "맞춤형상담서비스",
+        "교육지원",
         "장기미취업청년"
       ],
       "eligibility": {
@@ -1719,9 +1661,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
         "중소기업",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -1749,8 +1691,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.232,
       "keywords": [
-        "주거지원",
-        "보조금"
+        "보조금",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -1836,8 +1778,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "교육지원",
-        "벤처",
-        "인턴"
+        "인턴",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 19,
@@ -2005,8 +1947,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20400000000000001,
       "keywords": [
-        "중소기업",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -2289,8 +2231,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "장기미취업청년"
+        "장기미취업청년",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -2441,64 +2383,6 @@
       "eligibility": {
         "age_min": 0,
         "age_max": 200,
-        "regions": [
-          "부산"
-        ],
-        "income_max_pct": null,
-        "status": [],
-        "housing": []
-      }
-    },
-    {
-      "id": "OY-20260513005400213204",
-      "name": "부산 청년 일하는 기쁨카드 지원",
-      "category": "취업·창업",
-      "org": "부산광역시 청년산학국 청년정책과",
-      "summary": "부산 소재 중소기업 재직 청년에게 복지포인트 지원으로 근로의욕 고취 및 복지수준 향상",
-      "amount_max": 1000000,
-      "amount_label": "최대 100만원",
-      "apply_start": "2026.04.06",
-      "apply_end": "2026.04.24",
-      "url": "https://young.busan.go.kr/index.nm?menuCd=33",
-      "special_req": "",
-      "status_label": "신청 가능",
-      "benefit_score": 0.28,
-      "keywords": [
-        "바우처",
-        "중소기업"
-      ],
-      "eligibility": {
-        "age_min": 18,
-        "age_max": 39,
-        "regions": [
-          "부산"
-        ],
-        "income_max_pct": null,
-        "status": [],
-        "housing": []
-      }
-    },
-    {
-      "id": "OY-20260513005400213203",
-      "name": "부산 청년두드림센터 운영",
-      "category": "취업·창업",
-      "org": "부산광역시 청년산학국",
-      "summary": "부산지역 청년의 취업역량 강화프로그램 운영, 취업활동공간 지원, 청년일자리 상담 및 취업 알선 등 부산청년 취업 지원을 위한 센터 운영사업",
-      "amount_max": null,
-      "amount_label": "",
-      "apply_start": "2026.01.01",
-      "apply_end": "2026.12.31",
-      "url": "https://busanjob.net/yjob/view.do?no=1215",
-      "special_req": "",
-      "status_label": "신청 가능",
-      "benefit_score": 0.3,
-      "keywords": [
-        "맞춤형상담서비스",
-        "장기미취업청년"
-      ],
-      "eligibility": {
-        "age_min": 18,
-        "age_max": 39,
         "regions": [
           "부산"
         ],
@@ -3323,8 +3207,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -3380,9 +3264,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.4,
       "keywords": [
+        "교육지원",
         "장기미취업청년",
-        "맞춤형상담서비스",
-        "교육지원"
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -3665,8 +3549,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -3750,8 +3634,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.36000000000000004,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 13,
@@ -4628,8 +4512,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "중소기업",
-        "벤처",
         "교육지원",
+        "벤처",
         "인턴"
       ],
       "eligibility": {
@@ -4883,9 +4767,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
         "맞춤형상담서비스",
-        "바우처"
+        "바우처",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -4942,9 +4826,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "교육지원",
         "맞춤형상담서비스",
-        "보조금",
-        "교육지원"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -5000,8 +4884,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
         "벤처",
+        "중소기업",
         "보조금"
       ],
       "eligibility": {
@@ -5144,8 +5028,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "교육지원",
-        "해외진출",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "해외진출"
       ],
       "eligibility": {
         "age_min": 19,
@@ -5229,9 +5113,9 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
+        "주거지원",
         "청년가장",
-        "보조금",
-        "주거지원"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -5315,11 +5199,11 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32320000000000004,
       "keywords": [
-        "육아",
+        "맞춤형상담서비스",
         "청년가장",
-        "출산",
         "보조금",
-        "맞춤형상담서비스"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -5516,10 +5400,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.232,
       "keywords": [
-        "청년가장",
         "맞춤형상담서비스",
-        "바우처",
-        "보조금"
+        "보조금",
+        "청년가장",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -5772,8 +5656,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -5802,9 +5686,9 @@
       "benefit_score": 0.3,
       "keywords": [
         "주거지원",
-        "중소기업",
         "벤처",
-        "교육지원"
+        "교육지원",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -5916,10 +5800,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
         "교육지원",
+        "중소기업",
         "인턴",
-        "중소기업"
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -5947,8 +5831,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "장기미취업청년"
+        "장기미취업청년",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -6146,8 +6030,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -6231,8 +6115,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 9,
@@ -6486,8 +6370,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "인턴"
+        "인턴",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -6543,9 +6427,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
         "바우처",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -6657,8 +6541,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.256,
       "keywords": [
-        "중소기업",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -6826,8 +6710,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "해외진출"
+        "해외진출",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -7223,8 +7107,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -7280,8 +7164,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.21600000000000003,
       "keywords": [
-        "보조금",
-        "바우처"
+        "바우처",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 18,
@@ -7759,8 +7643,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "교육지원",
-        "중소기업"
+        "중소기업",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -7818,8 +7702,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.224,
       "keywords": [
-        "바우처",
-        "보조금"
+        "보조금",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 15,
@@ -8131,8 +8015,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "대출",
-        "보조금"
+        "보조금",
+        "대출"
       ],
       "eligibility": {
         "age_min": 18,
@@ -9001,8 +8885,8 @@
       "benefit_score": 0.6799999999999999,
       "keywords": [
         "육아",
-        "출산",
-        "보조금"
+        "보조금",
+        "출산"
       ],
       "eligibility": {
         "age_min": 19,
@@ -9343,8 +9227,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "대출"
+        "대출",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -9372,8 +9256,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "대출",
-        "신용회복"
+        "신용회복",
+        "대출"
       ],
       "eligibility": {
         "age_min": 0,
@@ -9430,9 +9314,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "장기미취업청년",
         "인턴",
         "중소기업",
-        "장기미취업청년",
         "교육지원"
       ],
       "eligibility": {
@@ -9461,8 +9345,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
         "중소기업",
+        "인턴",
         "장기미취업청년"
       ],
       "eligibility": {
@@ -9492,8 +9376,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "교육지원",
-        "장기미취업청년",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 18,
@@ -9666,8 +9550,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 0,
@@ -9755,8 +9639,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "장기미취업청년"
+        "장기미취업청년",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -9785,8 +9669,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -10137,8 +10021,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "장기미취업청년"
+        "장기미취업청년",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -10196,8 +10080,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -10226,8 +10110,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -10964,8 +10848,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "바우처",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -11644,8 +11528,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -11869,8 +11753,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "장기미취업청년"
+        "장기미취업청년",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -12123,9 +12007,9 @@
       "benefit_score": 0.3,
       "keywords": [
         "육아",
-        "보조금",
+        "출산",
         "주거지원",
-        "출산"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 18,
@@ -12182,8 +12066,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.256,
       "keywords": [
-        "보조금",
-        "중소기업"
+        "중소기업",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 15,
@@ -12239,8 +12123,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -12382,8 +12266,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
         "대출",
+        "중소기업",
         "벤처"
       ],
       "eligibility": {
@@ -12440,8 +12324,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -12581,8 +12465,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "인턴"
+        "인턴",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -12638,9 +12522,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "교육지원",
         "장기미취업청년",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -12668,10 +12552,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "교육지원",
+        "인턴",
         "맞춤형상담서비스",
-        "인턴"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -12699,9 +12583,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "인턴",
         "맞춤형상담서비스",
-        "장기미취업청년",
-        "인턴"
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -12757,12 +12641,12 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
+        "장기미취업청년",
         "해외진출",
-        "교육지원",
-        "맞춤형상담서비스",
+        "중소기업",
         "인턴",
-        "장기미취업청년"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -12819,8 +12703,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "주거지원"
+        "주거지원",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -12904,8 +12788,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "대출",
-        "신용회복"
+        "신용회복",
+        "대출"
       ],
       "eligibility": {
         "age_min": 0,
@@ -13437,8 +13321,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
-        "교육지원"
+        "교육지원",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 15,
@@ -13751,8 +13635,8 @@
       "benefit_score": 1.0,
       "keywords": [
         "주거지원",
-        "청년가장",
-        "보조금"
+        "보조금",
+        "청년가장"
       ],
       "eligibility": {
         "age_min": 0,
@@ -13864,8 +13748,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "금리혜택",
-        "대출"
+        "대출",
+        "금리혜택"
       ],
       "eligibility": {
         "age_min": 19,
@@ -13982,9 +13866,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
         "중소기업",
-        "벤처"
+        "벤처",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 0,
@@ -14012,8 +13896,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -14041,8 +13925,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
         "교육지원",
+        "인턴",
         "벤처"
       ],
       "eligibility": {
@@ -14071,8 +13955,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -14100,8 +13984,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -14416,8 +14300,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
-        "교육지원"
+        "교육지원",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 0,
@@ -14559,8 +14443,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -15067,8 +14951,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
         "교육지원",
+        "맞춤형상담서비스",
         "보조금"
       ],
       "eligibility": {
@@ -15182,8 +15066,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
         "인턴",
+        "교육지원",
         "보조금"
       ],
       "eligibility": {
@@ -15382,8 +15266,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -15751,8 +15635,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -16037,8 +15921,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "주거지원",
-        "보조금"
+        "보조금",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -16066,8 +15950,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "주거지원",
-        "보조금"
+        "보조금",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -16934,8 +16818,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "장기미취업청년"
+        "장기미취업청년",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -17082,8 +16966,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "장기미취업청년"
+        "장기미취업청년",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -18298,8 +18182,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 1,
@@ -19338,8 +19222,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "교육지원"
+        "교육지원",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 34,
@@ -19651,8 +19535,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
-        "해외진출"
+        "해외진출",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 19,
@@ -19961,8 +19845,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "청년가장"
+        "청년가장",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -20018,8 +19902,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -20075,8 +19959,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -20301,8 +20185,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -20442,8 +20326,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "맞춤형상담서비스",
         "출산",
+        "맞춤형상담서비스",
         "육아"
       ],
       "eligibility": {
@@ -20500,8 +20384,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "보조금"
+        "보조금",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -20529,8 +20413,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "대출"
+        "대출",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -20875,8 +20759,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -21157,8 +21041,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "보조금"
+        "보조금",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -21774,8 +21658,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "금리혜택",
-        "대출"
+        "대출",
+        "금리혜택"
       ],
       "eligibility": {
         "age_min": 19,
@@ -21803,8 +21687,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -22338,8 +22222,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -22367,9 +22251,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "벤처",
         "중소기업",
-        "바우처",
-        "벤처"
+        "바우처"
       ],
       "eligibility": {
         "age_min": 45,
@@ -22397,8 +22281,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "주거지원",
-        "공공임대주택"
+        "공공임대주택",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -22426,9 +22310,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
+        "벤처",
         "보조금",
-        "벤처"
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -22484,13 +22368,13 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업",
         "교육지원",
-        "청년가장",
         "장기미취업청년",
-        "맞춤형상담서비스",
-        "인턴"
+        "청년가장",
+        "중소기업",
+        "벤처",
+        "인턴",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -22688,8 +22572,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "벤처",
-        "중소기업",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -23225,8 +23109,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -23254,8 +23138,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "육아",
-        "출산"
+        "출산",
+        "육아"
       ],
       "eligibility": {
         "age_min": 1,
@@ -23759,8 +23643,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.232,
       "keywords": [
-        "육아",
-        "출산"
+        "출산",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -23788,9 +23672,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
+        "해외진출",
         "주거지원",
-        "해외진출"
+        "인턴"
       ],
       "eligibility": {
         "age_min": 19,
@@ -23846,8 +23730,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -24661,8 +24545,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.5840000000000001,
       "keywords": [
-        "보조금",
-        "주거지원"
+        "주거지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -24752,8 +24636,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -24839,8 +24723,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -24868,8 +24752,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "대출",
-        "주거지원"
+        "주거지원",
+        "대출"
       ],
       "eligibility": {
         "age_min": 19,
@@ -25150,8 +25034,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 1,
@@ -25179,8 +25063,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -25517,8 +25401,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.384,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -25547,8 +25431,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "육아",
-        "출산"
+        "출산",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -25932,8 +25816,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -26022,8 +25906,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -26052,8 +25936,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.76,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 18,
@@ -26231,8 +26115,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -26261,8 +26145,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "육아",
-        "출산"
+        "출산",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -26641,8 +26525,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "육아",
-        "보조금"
+        "보조금",
+        "육아"
       ],
       "eligibility": {
         "age_min": 35,
@@ -27017,8 +26901,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "교육지원",
-        "장기미취업청년",
-        "인턴"
+        "인턴",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 0,
@@ -27441,9 +27325,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
+        "주거지원",
         "교육지원",
-        "주거지원"
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -27471,9 +27355,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
         "맞춤형상담서비스",
-        "주거지원"
+        "주거지원",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -27557,8 +27441,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "주거지원"
+        "주거지원",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -27699,8 +27583,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -27785,8 +27669,8 @@
       "benefit_score": 1.0,
       "keywords": [
         "보조금",
-        "대출",
-        "주거지원"
+        "주거지원",
+        "대출"
       ],
       "eligibility": {
         "age_min": 19,
@@ -27845,9 +27729,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
         "벤처",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -28016,8 +27900,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "벤처",
-        "보조금",
-        "중소기업"
+        "중소기업",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -28383,8 +28267,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "벤처"
+        "벤처",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -28468,10 +28352,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원",
+        "중소기업",
         "인턴",
-        "중소기업"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -28499,9 +28383,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "중소기업",
         "보조금",
-        "벤처",
-        "중소기업"
+        "벤처"
       ],
       "eligibility": {
         "age_min": 19,
@@ -28727,9 +28611,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
-        "중소기업",
         "장기미취업청년",
+        "중소기업",
+        "인턴",
         "보조금"
       ],
       "eligibility": {
@@ -28758,8 +28642,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.21200000000000002,
       "keywords": [
-        "교육지원",
-        "주거지원"
+        "주거지원",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -28843,8 +28727,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.2064,
       "keywords": [
-        "바우처",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -28956,8 +28840,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.48,
       "keywords": [
-        "교육지원",
         "보조금",
+        "교육지원",
         "맞춤형상담서비스",
         "장기미취업청년"
       ],
@@ -28987,8 +28871,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "대출",
-        "교육지원"
+        "교육지원",
+        "대출"
       ],
       "eligibility": {
         "age_min": 0,
@@ -29695,8 +29579,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -29808,8 +29692,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "인턴"
+        "인턴",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -30183,8 +30067,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "보조금",
-        "주거지원"
+        "주거지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -30581,8 +30465,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -31058,9 +30942,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "중소기업",
         "교육지원",
-        "벤처",
-        "중소기업"
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -31341,8 +31225,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "금리혜택",
         "중소기업",
+        "금리혜택",
         "벤처"
       ],
       "eligibility": {
@@ -31400,8 +31284,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 19,
@@ -31429,8 +31313,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "중소기업"
+        "중소기업",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -31458,8 +31342,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "중소기업"
+        "중소기업",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -31487,8 +31371,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -31544,8 +31428,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "대출",
-        "주거지원"
+        "주거지원",
+        "대출"
       ],
       "eligibility": {
         "age_min": 19,
@@ -32143,8 +32027,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "대출",
-        "금리혜택"
+        "금리혜택",
+        "대출"
       ],
       "eligibility": {
         "age_min": 0,
@@ -32453,9 +32337,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "장기미취업청년",
         "맞춤형상담서비스",
-        "중소기업",
-        "장기미취업청년"
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -32512,8 +32396,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.224,
       "keywords": [
-        "중소기업",
-        "주거지원"
+        "주거지원",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -32541,8 +32425,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.56,
       "keywords": [
-        "중소기업",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -32823,8 +32707,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -32936,9 +32820,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "보조금",
         "출산",
-        "육아"
+        "육아",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -33191,8 +33075,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -33277,8 +33161,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "교육지원",
-        "중소기업"
+        "중소기업",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -33390,8 +33274,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "중소기업",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -33643,8 +33527,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -34037,8 +33921,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -34262,8 +34146,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -34515,8 +34399,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "보조금",
-        "중소기업"
+        "중소기업",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 18,
@@ -34965,8 +34849,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "인턴",
-        "장기미취업청년"
+        "장기미취업청년",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 18,
@@ -34994,8 +34878,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "장기미취업청년",
         "인턴",
+        "장기미취업청년",
         "중소기업"
       ],
       "eligibility": {
@@ -35164,8 +35048,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "해외진출",
-        "교육지원"
+        "교육지원",
+        "해외진출"
       ],
       "eligibility": {
         "age_min": 18,
@@ -36181,8 +36065,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -36210,8 +36094,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -36267,8 +36151,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -36553,8 +36437,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -36722,10 +36606,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "맞춤형상담서비스",
         "장기미취업청년",
-        "바우처",
         "교육지원",
-        "맞춤형상담서비스"
+        "바우처"
       ],
       "eligibility": {
         "age_min": 19,
@@ -36809,8 +36693,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -36838,8 +36722,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -37036,8 +36920,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.44,
       "keywords": [
-        "육아",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -37066,8 +36950,8 @@
       "benefit_score": 0.344,
       "keywords": [
         "출산",
-        "바우처",
-        "육아"
+        "육아",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -37126,8 +37010,8 @@
       "benefit_score": 0.44,
       "keywords": [
         "출산",
-        "육아",
-        "바우처"
+        "바우처",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -37155,10 +37039,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.4,
       "keywords": [
+        "장기미취업청년",
         "맞춤형상담서비스",
         "보조금",
-        "교육지원",
-        "장기미취업청년"
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -37328,8 +37212,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.24000000000000002,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -37585,8 +37469,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -37643,8 +37527,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -37729,10 +37613,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.44,
       "keywords": [
-        "장기미취업청년",
-        "중소기업",
         "보조금",
-        "주거지원"
+        "주거지원",
+        "장기미취업청년",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -37930,8 +37814,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "주거지원",
-        "교육지원"
+        "교육지원",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -38127,8 +38011,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.36000000000000004,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -38299,8 +38183,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.968,
       "keywords": [
-        "중소기업",
         "보조금",
+        "중소기업",
         "맞춤형상담서비스"
       ],
       "eligibility": {
@@ -38358,8 +38242,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.224,
       "keywords": [
-        "주거지원",
-        "보조금"
+        "보조금",
+        "주거지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -38446,8 +38330,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -38560,8 +38444,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "중소기업"
+        "중소기업",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -38589,8 +38473,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "보조금"
+        "보조금",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -38731,8 +38615,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -39074,8 +38958,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "교육지원"
+        "교육지원",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 0,
@@ -39131,10 +39015,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.4,
       "keywords": [
-        "교육지원",
         "보조금",
-        "맞춤형상담서비스",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -39358,8 +39242,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "벤처",
         "중소기업",
+        "벤처",
         "보조금"
       ],
       "eligibility": {
@@ -39416,8 +39300,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -39641,8 +39525,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -39839,9 +39723,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
+        "중소기업",
         "인턴",
-        "중소기업"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -40153,9 +40037,9 @@
       "keywords": [
         "출산",
         "육아",
-        "보조금",
+        "금리혜택",
         "바우처",
-        "금리혜택"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -40183,9 +40067,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "인턴",
         "벤처",
-        "교육지원"
+        "교육지원",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 19,
@@ -40325,9 +40209,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "벤처",
         "교육지원",
-        "중소기업",
-        "벤처"
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -40440,10 +40324,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20240000000000002,
       "keywords": [
-        "바우처",
-        "보조금",
         "금리혜택",
-        "공공임대주택"
+        "보조금",
+        "공공임대주택",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -40613,9 +40497,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "벤처",
         "인턴",
-        "중소기업",
-        "벤처"
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -40699,8 +40583,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "대출",
-        "금리혜택"
+        "금리혜택",
+        "대출"
       ],
       "eligibility": {
         "age_min": 0,
@@ -40841,8 +40725,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -40870,8 +40754,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 19,
@@ -40899,8 +40783,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 19,
@@ -40928,8 +40812,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -41126,8 +41010,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "인턴"
+        "인턴",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -41155,8 +41039,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -41240,10 +41124,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
+        "맞춤형상담서비스",
         "교육지원",
         "인턴",
-        "맞춤형상담서비스"
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -41327,8 +41211,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -41470,8 +41354,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "중소기업",
-        "인턴",
-        "벤처"
+        "벤처",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 18,
@@ -42032,8 +41916,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.232,
       "keywords": [
-        "바우처",
-        "보조금"
+        "보조금",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -42933,9 +42817,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.48,
       "keywords": [
-        "장기미취업청년",
+        "맞춤형상담서비스",
         "교육지원",
-        "맞춤형상담서비스"
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -44794,8 +44678,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "대출",
-        "벤처"
+        "벤처",
+        "대출"
       ],
       "eligibility": {
         "age_min": 17,
@@ -44908,9 +44792,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
         "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -44967,8 +44851,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -45305,8 +45189,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "인턴"
+        "인턴",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -45334,8 +45218,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.4,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -45363,9 +45247,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "바우처",
         "대출",
-        "보조금"
+        "보조금",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -45393,9 +45277,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
+        "바우처",
         "대출",
-        "보조금",
-        "바우처"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -45479,8 +45363,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
         "교육지원",
+        "벤처",
         "중소기업"
       ],
       "eligibility": {
@@ -45762,9 +45646,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.9200000000000002,
       "keywords": [
-        "보조금",
+        "해외진출",
         "인턴",
-        "해외진출"
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -46888,8 +46772,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "해외진출"
+        "해외진출",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -47594,8 +47478,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "벤처"
+        "벤처",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -47623,8 +47507,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -47932,8 +47816,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.21600000000000003,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -47961,8 +47845,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "바우처",
-        "보조금"
+        "보조금",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -48977,8 +48861,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "금리혜택"
+        "금리혜택",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -49006,8 +48890,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -50062,8 +49946,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -51079,8 +50963,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.344,
       "keywords": [
-        "장기미취업청년",
-        "보조금"
+        "보조금",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 18,
@@ -51222,8 +51106,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.6000000000000001,
       "keywords": [
-        "금리혜택",
-        "대출"
+        "대출",
+        "금리혜택"
       ],
       "eligibility": {
         "age_min": 25,
@@ -51251,8 +51135,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "출산",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -51309,8 +51193,8 @@
       "benefit_score": 0.24000000000000002,
       "keywords": [
         "보조금",
-        "바우처",
-        "출산"
+        "출산",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -51366,8 +51250,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.2064,
       "keywords": [
-        "맞춤형상담서비스",
-        "바우처"
+        "바우처",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -51396,8 +51280,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "중소기업",
-        "해외진출",
-        "교육지원"
+        "교육지원",
+        "해외진출"
       ],
       "eligibility": {
         "age_min": 19,
@@ -51509,8 +51393,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "금리혜택",
-        "중소기업"
+        "중소기업",
+        "금리혜택"
       ],
       "eligibility": {
         "age_min": 0,
@@ -51566,8 +51450,8 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "보조금",
-        "금리혜택"
+        "금리혜택",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -52077,8 +51961,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -52731,8 +52615,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "공공임대주택",
-        "주거지원"
+        "주거지원",
+        "공공임대주택"
       ],
       "eligibility": {
         "age_min": 0,
@@ -53241,8 +53125,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -53762,8 +53646,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.36000000000000004,
       "keywords": [
-        "보조금",
-        "교육지원"
+        "교육지원",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 0,
@@ -53877,8 +53761,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.232,
       "keywords": [
-        "육아",
-        "중소기업"
+        "중소기업",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -53906,8 +53790,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "중소기업"
+        "중소기업",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -53993,9 +53877,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "중소기업",
+        "보조금",
         "벤처",
-        "보조금"
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -54023,8 +53907,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
         "보조금",
+        "벤처",
         "중소기업"
       ],
       "eligibility": {
@@ -54113,8 +53997,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 0,
@@ -54142,8 +54026,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -54199,8 +54083,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.4,
       "keywords": [
-        "장기미취업청년",
-        "교육지원"
+        "교육지원",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 18,
@@ -54228,9 +54112,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
         "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54286,13 +54170,13 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
         "중소기업",
-        "청년가장",
-        "장기미취업청년",
-        "맞춤형상담서비스",
+        "벤처",
         "인턴",
-        "교육지원"
+        "맞춤형상담서비스",
+        "교육지원",
+        "장기미취업청년",
+        "청년가장"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54321,8 +54205,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "교육지원",
-        "맞춤형상담서비스",
-        "벤처"
+        "벤처",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -54407,13 +54291,13 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
         "인턴",
-        "맞춤형상담서비스",
         "교육지원",
-        "장기미취업청년",
+        "중소기업",
         "청년가장",
-        "중소기업"
+        "장기미취업청년",
+        "벤처",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54441,8 +54325,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "인턴"
+        "인턴",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54470,8 +54354,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "보조금"
+        "보조금",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 16,
@@ -54585,10 +54469,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "출산",
         "육아",
-        "보조금",
-        "해외진출"
+        "해외진출",
+        "출산",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54729,8 +54613,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.21200000000000002,
       "keywords": [
-        "보조금",
-        "인턴"
+        "인턴",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54814,10 +54698,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "출산",
-        "대출",
         "보조금",
-        "육아"
+        "육아",
+        "대출",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -54930,8 +54814,8 @@
       "benefit_score": 1.0,
       "keywords": [
         "벤처",
-        "보조금",
-        "중소기업"
+        "중소기업",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 19,
@@ -54959,8 +54843,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.24000000000000002,
       "keywords": [
-        "금리혜택",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "금리혜택"
       ],
       "eligibility": {
         "age_min": 19,
@@ -55270,8 +55154,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.24000000000000002,
       "keywords": [
-        "육아",
-        "출산"
+        "출산",
+        "육아"
       ],
       "eligibility": {
         "age_min": 0,
@@ -55328,8 +55212,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "바우처",
-        "출산"
+        "출산",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -55497,8 +55381,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "청년가장",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "청년가장"
       ],
       "eligibility": {
         "age_min": 0,
@@ -55526,9 +55410,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
         "보조금",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -55700,8 +55584,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "교육지원"
+        "교육지원",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 19,
@@ -55870,8 +55754,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "금리혜택"
+        "금리혜택",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 19,
@@ -55986,13 +55870,13 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "청년가장",
-        "장기미취업청년",
-        "육아",
-        "출산",
         "교육지원",
-        "맞춤형상담서비스",
+        "출산",
+        "육아",
+        "장기미취업청년",
+        "청년가장",
+        "중소기업",
+        "벤처",
         "인턴"
       ],
       "eligibility": {
@@ -56553,9 +56437,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
+        "맞춤형상담서비스",
         "중소기업",
-        "맞춤형상담서비스"
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 17,
@@ -56583,10 +56467,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
         "벤처",
+        "청년가장",
         "장기미취업청년",
-        "청년가장"
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -57207,9 +57091,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.6000000000000001,
       "keywords": [
-        "보조금",
         "교육지원",
-        "바우처"
+        "바우처",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 15,
@@ -57433,10 +57317,10 @@
       "status_label": "신청 가능",
       "benefit_score": 1.0,
       "keywords": [
-        "장기미취업청년",
-        "교육지원",
+        "대출",
         "보조금",
-        "대출"
+        "교육지원",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 0,
@@ -57464,8 +57348,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -57634,8 +57518,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.2064,
       "keywords": [
-        "바우처",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -57808,8 +57692,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20320000000000002,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 0,
@@ -58151,8 +58035,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "바우처",
-        "교육지원"
+        "교육지원",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -58348,8 +58232,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "출산",
-        "육아"
+        "육아",
+        "출산"
       ],
       "eligibility": {
         "age_min": 18,
@@ -58719,8 +58603,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.2056,
       "keywords": [
-        "바우처",
-        "중소기업"
+        "중소기업",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -58748,8 +58632,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -58946,8 +58830,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "바우처",
-        "장기미취업청년"
+        "장기미취업청년",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -59322,8 +59206,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -59435,8 +59319,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "교육지원"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 18,
@@ -59801,8 +59685,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "벤처",
-        "중소기업"
+        "중소기업",
+        "벤처"
       ],
       "eligibility": {
         "age_min": 18,
@@ -60055,8 +59939,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "보조금"
+        "보조금",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -60140,8 +60024,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 18,
@@ -60225,8 +60109,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.224,
       "keywords": [
-        "보조금",
-        "금리혜택"
+        "금리혜택",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 18,
@@ -60282,8 +60166,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "공공임대주택"
+        "공공임대주택",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -60760,8 +60644,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -60818,10 +60702,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "보조금",
-        "금리혜택",
         "교육지원",
-        "바우처"
+        "보조금",
+        "바우처",
+        "금리혜택"
       ],
       "eligibility": {
         "age_min": 0,
@@ -60850,9 +60734,9 @@
       "benefit_score": 0.36000000000000004,
       "keywords": [
         "청년가장",
-        "맞춤형상담서비스",
+        "보조금",
         "교육지원",
-        "보조금"
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 13,
@@ -60939,8 +60823,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.28,
       "keywords": [
-        "바우처",
-        "출산"
+        "출산",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -61138,8 +61022,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.32,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 0,
@@ -61195,10 +61079,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "맞춤형상담서비스",
-        "중소기업",
         "교육지원",
-        "해외진출"
+        "해외진출",
+        "중소기업",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -61254,8 +61138,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.26480000000000004,
       "keywords": [
-        "바우처",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -61483,8 +61367,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -61686,10 +61570,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
+        "바우처",
         "벤처",
-        "맞춤형상담서비스",
-        "바우처"
+        "교육지원",
+        "맞춤형상담서비스"
       ],
       "eligibility": {
         "age_min": 0,
@@ -61834,8 +61718,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "장기미취업청년"
+        "장기미취업청년",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62092,8 +61976,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.2016,
       "keywords": [
-        "보조금",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "보조금"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62206,10 +62090,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
         "출산",
-        "육아",
-        "청년가장"
+        "교육지원",
+        "청년가장",
+        "육아"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62265,8 +62149,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "벤처"
+        "벤처",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62295,8 +62179,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "교육지원",
-        "장기미취업청년",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62380,8 +62264,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "장기미취업청년",
-        "교육지원"
+        "교육지원",
+        "장기미취업청년"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62466,9 +62350,9 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "청년가장",
+        "인턴",
         "장기미취업청년",
-        "인턴"
+        "청년가장"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62552,8 +62436,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "인턴"
+        "인턴",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 19,
@@ -62639,8 +62523,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "중소기업",
-        "금리혜택"
+        "금리혜택",
+        "중소기업"
       ],
       "eligibility": {
         "age_min": 18,
@@ -62813,8 +62697,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 9,
@@ -62898,10 +62782,10 @@
       "status_label": "신청 가능",
       "benefit_score": 0.20800000000000002,
       "keywords": [
-        "바우처",
+        "보조금",
         "공공임대주택",
         "맞춤형상담서비스",
-        "보조금"
+        "바우처"
       ],
       "eligibility": {
         "age_min": 0,
@@ -62959,8 +62843,8 @@
       "benefit_score": 0.3,
       "keywords": [
         "벤처",
-        "인턴",
-        "중소기업"
+        "중소기업",
+        "인턴"
       ],
       "eligibility": {
         "age_min": 18,
@@ -63325,8 +63209,8 @@
       "status_label": "신청 가능",
       "benefit_score": 0.3,
       "keywords": [
-        "교육지원",
-        "맞춤형상담서비스"
+        "맞춤형상담서비스",
+        "교육지원"
       ],
       "eligibility": {
         "age_min": 18,
@@ -65118,8 +65002,8 @@
       "summary": "청년에게 월 임차료 지원",
       "amount_max": 200000,
       "amount_label": "최대 20만원",
-      "apply_start": "2025.01.31",
-      "apply_end": "2025.11.28",
+      "apply_start": "",
+      "apply_end": "2026.03.16",
       "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/383000000113",
       "special_req": "",
       "status_label": "신청 가능",
@@ -70461,6 +70345,38 @@
       }
     },
     {
+      "id": "GV-626000000618",
+      "name": "부산 청년 일하는 기쁨카드 지원",
+      "category": "생활·교통",
+      "org": "부산광역시",
+      "summary": "1인당 연 100만원 복지포인트(재직 확인 후 연 2회 분할) 지원",
+      "amount_max": 1000000,
+      "amount_label": "최대 100만원",
+      "apply_start": "",
+      "apply_end": "2026.04.06",
+      "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/626000000618",
+      "special_req": "",
+      "status_label": "신청 가능",
+      "benefit_score": 0.28,
+      "keywords": [
+        "부산",
+        "청년",
+        "일하는",
+        "기쁨카드",
+        "지원"
+      ],
+      "eligibility": {
+        "age_min": 18,
+        "age_max": 39,
+        "regions": [
+          "부산"
+        ],
+        "income_max_pct": null,
+        "status": [],
+        "housing": []
+      }
+    },
+    {
       "id": "GV-626000000626",
       "name": "(2026) 부산광역시 평생함께 청년모두가 주거비 지원(기존 공공임대주택 입주자 대상)",
       "category": "주거",
@@ -72248,7 +72164,7 @@
       "name": "청년 1인 소상공인·농어업인 출산급여 지원",
       "category": "생활·교통",
       "org": "전북특별자치도",
-      "summary": "본인 또는 배우자 출산 시 출산 급여 본인 90만 원, 배우자 80만 원 지급",
+      "summary": "본인 또는 배우자 출산 시 본인 90만 원, 배우자 80만 원 지급",
       "amount_max": 900000,
       "amount_label": "최대 90만원",
       "apply_start": "",
